@@ -6,7 +6,7 @@
     <string name="home_else">Ещё</string>
     <string name="home_fresh_item_1">Французские тосты с клубникой</string>
     <string name="home_fresh_item_2">Чёрные маффины</string>
-    <string name="home_fresh_item_3">Чёрные маффины</string>
+    <string name="home_fresh_item_3" translatable="false">Чёрные маффины</string>
     <string name="home_fresh_item_4">Чёрные маффины</string>
     <string name="home_fresh_item_5">Лосось в глазури</string>
     <string name="home_recommended_header">Рекомендуем</string>

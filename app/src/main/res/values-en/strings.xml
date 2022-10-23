@@ -1,3 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">MyRecipes</string>
+    <string name="home_recommended_header">Recommend</string>
+    <string name="home_else">Else</string>
+    <string name="home_search">Search</string>
+    <string name="home_fresh_header">Popular recipes</string>
+    <string name="recipe_view_1_back_button">Back</string>
+    <string name="home_bottom_menu_item_1">Search</string>
+    <string name="home_bottom_menu_item_2">My recipes</string>
+    <string name="home_bottom_menu_item_3">Profile</string>
 </resources>

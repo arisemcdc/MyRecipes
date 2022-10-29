@@ -13,10 +13,9 @@ enum class FoodCategory {
         DESSERT
     }
 data class Recipe(val name: String, val category: FoodCategory, val ingridients: List<String>,
-                  val timeForPreparing: String, val calories: Int, val steps:List<String>, val isFavorite: Boolean, val rating: Int,
+                  val timeForPreparing: Int, val calories: Int, val steps:List<String>, val isFavorite: Boolean, val rating: Int,
                   val foodImage: String, val numberOfServings: Int
-                    ) {
-}
+                    )
 sealed class IngridientInfo {
     val ingridientType: String
         get() {
@@ -26,4 +25,12 @@ sealed class IngridientInfo {
         get() {
             return "Имя ингридиента"
         }
+}
+
+enum class Ingridient {
+    BLUEBERRY,
+    BUTTER,
+    STRAWBERRY,
+    SUGAR,
+    WATER
 }

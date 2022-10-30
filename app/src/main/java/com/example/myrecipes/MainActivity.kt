@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val fakeFoodRepository = FakeFoodRepository()
+        val foodUtils = FoodUtils()
         /*timber.log.d("MainActivity","This is log for OnCreate")*/
         /*log(1, "MainActivity", "This is log for OnCreate")*/
         d("MainActivity", "This is for OnCreate")
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("Fakerepository", fakeFoodRepository.sortByCalories().toString())
         Log.d("Fakerepository", fakeFoodRepository.sortByCategory().toString())
         Log.d("Fakerepository", fakeFoodRepository.sortByTimeForPreparing().toString())
+        Log.d("Fakerepository", foodUtils.resolveFoodIngredient().toString())
     }
 
 }

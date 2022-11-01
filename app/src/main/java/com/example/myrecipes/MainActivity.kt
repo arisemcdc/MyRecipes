@@ -19,4 +19,19 @@ class MainActivity : AppCompatActivity() {
         Timber.d("Hello","1")
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("MainActivity", "This is for OnResume")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("MainActivity", "This is for OnStop")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("MainActivity", "This is for OnPause")
+    }
 }

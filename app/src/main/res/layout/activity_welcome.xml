@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomeActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dailyRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daily Recipe" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Coming Done The Easy Way" />
+
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Регистрация" />
+
+    <TextView
+        android:id="@+id/enterTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Вход" />
+</LinearLayout>

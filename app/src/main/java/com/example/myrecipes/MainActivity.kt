@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("Fakerepository", fakeFoodRepository.sortByCalories().toString())
         Log.d("Fakerepository", fakeFoodRepository.sortByCategory().toString())
         Log.d("Fakerepository", fakeFoodRepository.sortByTimeForPreparing().toString())
-        Log.d("Fakerepository", foodUtils.resolveFoodIngredient().toString())
+        Log.d("Fakerepository", foodUtils.resolveFoodIngredient("WATER").toString())
     }
 
 }

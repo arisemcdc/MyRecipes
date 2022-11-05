@@ -1,33 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeActivity"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/dailyRecipe"
+    tools:context=".WelcomeActivity">
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Daily Recipe" />
+        android:layout_height="match_parent"
+        android:src = "@drawable/frying_pan_epmty_background"
 
-    <TextView
-        android:id="@+id/textView2"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Coming Done The Easy Way" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="32dp"
+            android:text="Daily Recipe"
+            android:textColor="@color/white"
+            android:layout_marginTop="328dp"
+             />
 
-    <Button
-        android:id="@+id/registrationButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Регистрация" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coming Done The Easy Way"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#B2B7C6"
+            android:layout_gravity="center"/>
 
-    <TextView
-        android:id="@+id/enterTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Вход" />
-</LinearLayout>
+        <Button
+            android:id="@+id/registrationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Регистрация"
+            app:backgroundTint="@color/orange"
+            android:layout_marginTop="235dp"/>
+
+        <Button
+            android:id="@+id/enterTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вход"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="8dp"
+            android:textColor="#B2B7C6"
+            android:background="@android:color/transparent"/>
+        </LinearLayout>
+</FrameLayout>

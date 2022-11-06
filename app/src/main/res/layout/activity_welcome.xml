@@ -43,10 +43,12 @@
             android:layout_gravity="center"
             android:text="Регистрация"
             app:backgroundTint="@color/orange"
-            android:layout_marginTop="235dp"/>
+            android:layout_marginTop="235dp"
+            app:cornerRadius="10dp"
+            />
 
         <Button
-            android:id="@+id/enterTextView"
+            android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Вход"

@@ -1,5 +1,6 @@
 package com.example.myrecipes
 
+import timber.log.Timber
 import java.util.*
 
 class FakeFoodRepository {
@@ -26,14 +27,15 @@ class FakeFoodRepository {
     val recipe5 = Recipe("Лосось в глазури", FoodCategory.SOUP, ingridients5, 40, 280,steps5,
         true, 5, "http:image1 ", 5)
 
-    fun getRecipe(recipe: Recipe):  List<Recipe> {
+    fun getRecipe():  List<Recipe> {
         recipes.add(recipe1)
         recipes.add(recipe1)
         recipes.add(recipe3)
         recipes.add(recipe4)
         recipes.add(recipe5)
+        Timber.d(recipes.toString())
         return recipes
-        println(recipes)
+        /*println(recipes)*/
     }
 
     /*fun sortByRating(recipes: MutableList<Recipe>, descendingOrder: String ): List<Recipe> {

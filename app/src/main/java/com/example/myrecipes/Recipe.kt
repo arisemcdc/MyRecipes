@@ -1,5 +1,6 @@
 package com.example.myrecipes
 
+import androidx.annotation.StringRes
 import java.lang.reflect.Array
 
 enum class Meal {
@@ -27,10 +28,15 @@ sealed class IngridientInfo {
         }
 }
 
+/*
 enum class Ingridient {
     BLUEBERRY,
     BUTTER,
     STRAWBERRY,
     SUGAR,
     WATER
-}
+}*/
+/*
+enum class Ingridient(@StringRes val ingridientName: Int) {
+    SUGAR(R.string.sugar_name)
+}*/

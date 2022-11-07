@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src = "@drawable/frying_pan_epmty_background"
-
         android:scaleType="centerCrop"/>
 
     <LinearLayout
@@ -48,9 +47,12 @@
             android:textSize="14dp"
             android:textColorHint="#B2B7C6"
             android:hint="Имя"
+            android:layout_marginTop="24dp"
             android:layout_gravity="center"
-            android:background="@android:color/transparent"
+            style="@style/Widget.Design.TextInputLayout"
+            app:backgroundTint="#B2B7C6"
             app:boxStrokeColor="@color/colorWhite"
+            app:startIconDrawable="@dra"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -58,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:textColor="#B2B7C6"
-                app:backgroundTint="#B2B7C6"
+
                 app:startIconDrawable=""
                 />
         </com.google.android.material.textfield.TextInputLayout>

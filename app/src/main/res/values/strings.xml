@@ -26,5 +26,9 @@
         сверху положить порезанную клубнику.</string>
     <string name="recipe_view_1_bon_appetit">Приятного аппетита</string>
     <string name="recipe_view_1_back_button">Вернуться</string>
-
+    <string name="sugar_name">Сахар</string>
+    <string name="blueberry_name">Черника</string>
+    <string name="strawberry_name">Клубника</string>
+    <string name="butter_name">Масло</string>
+    <string name="water_name">Вода</string>
 </resources>

@@ -5,18 +5,30 @@
       <map>
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2045" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/french_toast_background.xml" value="0.186" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.183" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.1165" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2045" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ic_outline_person_24.xml" value="0.183" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ingridient_blueberry_background.xml" value="0.212" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ingridient_butter_background.xml" value="0.212" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ingridient_strawberry_background.xml" value="0.212" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/ingridient_suggar_background.xml" value="0.18" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/salmon_in_glaze_background.xml" value="0.1795" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/drawable/toast_cinnamon_background.xml" value="0.1255" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/activity_login.xml" value="0.27461139896373055" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/activity_main.xml" value="0.1897644927536232" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/activity_registration.xml" value="0.2" />
-        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/activity_welcome.xml" value="0.4" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/layout/item_cardview.xml" value="0.264" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/User_name.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/email_icon.xml" value="0.1065" />
         <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/french_toast.xml" value="0.1795" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/french_toast_cardview.xml" value="0.1665" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/french_toast_cardview_round.xml" value="0.23" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/french_toast_round.xml" value="0.207" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/ingridient_blueberry.xml" value="0.181" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap-anydpi-v26/ingridient_strawberry.xml" value="0.181" />
+        <entry key="..\:/Users/Asus/AndroidStudioProjects/MyRecipes/app/src/main/res/mipmap/User_name.xml" value="0.1035" />
       </map>
     </option>
   </component>

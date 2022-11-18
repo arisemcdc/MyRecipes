@@ -23,7 +23,7 @@
             android:textSize="32dp"
             android:text="Daily Recipe"
             android:textColor="@color/white"
-            android:layout_marginTop="328dp"
+            android:layout_marginTop="240dp"
              />
 
         <TextView
@@ -43,7 +43,7 @@
             android:layout_gravity="center"
             android:text="Регистрация"
             app:backgroundTint="@color/orange"
-            android:layout_marginTop="235dp"
+            android:layout_marginTop="150dp"
             app:cornerRadius="10dp"
             />
 

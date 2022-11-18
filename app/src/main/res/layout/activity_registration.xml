@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src = "@drawable/frying_pan_epmty_background"
+        android:src = "@drawable/frying_pan_empty_assorted_spices"
         android:scaleType="centerCrop"/>
 
     <LinearLayout
@@ -24,11 +24,11 @@
             android:textSize="32dp"
             android:text="Daily Recipe"
             android:textColor="@color/white"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="100dp"
             />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -43,13 +43,11 @@
             android:id="@+id/nameText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="24dp"
+            android:layout_margin="6dp"
             android:textStyle="bold"
             android:textSize="14dp"
             android:textColorHint="#B2B7C6"
             android:hint="Имя"
-            android:layout_marginTop="24dp"
-            android:layout_gravity="center"
             style="@style/Widget.Design.TextInputLayout"
             app:backgroundTint="#B2B7C6"
             app:boxStrokeColor="@color/white">
@@ -59,7 +57,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="32dp"
+                android:layout_margin="10dp"
                 android:background="@android:color/transparent"
                 android:textColor="#B2B7C6"
                 app:startIconDrawable="@drawable/ic_outline_person_24"
@@ -69,14 +67,13 @@
             android:id="@+id/emailText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
             android:inputType="textPersonName"
             android:text="Email"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textSize="14dp"
-            android:layout_marginTop="24dp"
-            android:layout_margin="32dp"
+            android:layout_marginTop="0dp"
+            android:layout_margin="10dp"
             android:textColor="#B2B7C6"
             app:drawableStartCompat="@drawable/ic_baseline_email_24"
             app:backgroundTint="#B2B7C6"/>
@@ -84,14 +81,13 @@
             android:id="@+id/passwordText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="32dp"
-            android:ems="10"
+            android:layout_margin="10dp"
             android:inputType="textPersonName"
             android:text="Пароль"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:textSize="14dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="0dp"
             android:textColor="#B2B7C6"
             app:drawableStartCompat="@drawable/ic_baseline_lock_24"
             app:backgroundTint="#B2B7C6"/>
@@ -103,7 +99,7 @@
             android:layout_gravity="center"
             android:text="Регистрация"
             app:backgroundTint="@color/orange"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="5dp"
             app:cornerRadius="10dp"/>
         <LinearLayout
             android:layout_width="match_parent"
@@ -114,23 +110,23 @@
                 android:id="@+id/signinButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+
                 android:layout_marginStart="100dp"
                 android:text="Already registered?"
                 android:textColor="#B2B7C6"
                 android:textSize="14dp"
                 android:textStyle="bold" />
+
             <Button
-                android:id="@+id/textView3"
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:paddingStart="0dp"
                 android:text="Sign in."
                 android:textColor="@color/orange"
                 android:textSize="14dp"
-                android:paddingStart="0dp"
-                android:textStyle="bold"
-                android:background="@android:color/transparent"/>
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

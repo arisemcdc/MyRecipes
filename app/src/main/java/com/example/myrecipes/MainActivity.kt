@@ -4,14 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.util.Log.d
+import com.example.myrecipes.databinding.ActivityMainBinding
 import timber.log.Timber
 import timber.log.Timber.Forest.d
 import timber.log.Timber.Forest.log
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        /*setContentView(R.layout.activity_main)*/
+        binding = ActivityMainBinding.inflate(layoutInflater)
         val fakeFoodRepository = FakeFoodRepository()
         val foodUtils = FoodUtils()
         Log.d("MainActivity", "This is for OnCreate")

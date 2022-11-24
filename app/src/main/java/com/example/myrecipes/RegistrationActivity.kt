@@ -13,6 +13,8 @@ class RegistrationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         /*setContentView(R.layout.activity_registration)*/
         binding = ActivityRegistrationBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         binding.textView2.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }

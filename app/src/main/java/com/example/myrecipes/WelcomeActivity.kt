@@ -12,6 +12,8 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         /*setContentView(R.layout.activity_welcome)*/
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         binding.loginButton.setOnClickListener {
             startActivity(Intent(this,LoginActivity::class.java))
         }

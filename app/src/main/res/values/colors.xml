@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#F55A00</color>
-    <color name="grey">#F7F8FC</color>
+    <color name="card_view_background_color">#F7F8FC</color>
+    <color name="text_view_blue_color">#128FAE</color>
+    <color name="text_view_black_color">#1F222B</color>
+    <color name="text_view_grey_color">#B2B7C6</color>
     <color name="dark_grey">#C4C4C4</color>
     <color name="background_white">#FFFFFF</color>
 </resources>

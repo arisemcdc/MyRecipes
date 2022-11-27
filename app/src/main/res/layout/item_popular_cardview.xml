@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/black"
+    android:orientation = "vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout-margin ="15dp"
+        card_view:cardBackgroundColor="@color/card_view_background_color"
+        card_view:cardCornerRadius="32dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="210dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/toast_with_cinnamon_and_sugar" />
+            <TextView
+                android:id="@+id/meal_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Завтрак"
+                android:textColor="@color/text_view_blue_color"
+                android:textSize="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="15dp"/>
+            <TextView
+                android:id="@+id/name_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Тост с корицей и сахаром "
+                android:textColor="@color/text_view_black_color"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp">
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:progressTint="@color/orange"
+                    style="@style/customRatingBar"
+                    android:rating="2"
+                    android:stepSize="1"
+                    android:layout_marginTop="8dp"/>
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:checked="true"
+                    android:layout_marginLeft="100dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/calories_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="135 калорий"
+                android:textColor="@color/orange"
+                android:textSize="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp">
+                <TextView
+                    android:id="@+id/timeforpreparing_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45 мин"
+                    android:textColor="@color/text_view_grey_color"
+                    android:textSize="8dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                    android:drawablePadding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/numberofservings_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 порция"
+                    android:textColor="@color/text_view_grey_color"
+                    android:textSize="8dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/service_desk"
+                    android:drawablePadding="5dp"
+                    android:layout_marginLeft="18dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+
+
+

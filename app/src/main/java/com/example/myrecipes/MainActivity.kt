@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.util.Log.d
 import com.example.myrecipes.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import timber.log.Timber
 import timber.log.Timber.Forest.d
 import timber.log.Timber.Forest.log
@@ -16,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         /*setContentView(R.layout.activity_main)*/
         binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+        val navView: BottomNavigationView = binding.navView
         val fakeFoodRepository = FakeFoodRepository()
         val foodUtils = FoodUtils()
         Log.d("MainActivity", "This is for OnCreate")

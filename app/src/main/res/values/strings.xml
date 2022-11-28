@@ -31,4 +31,7 @@
     <string name="strawberry_name">Клубника</string>
     <string name="butter_name">Масло</string>
     <string name="water_name">Вода</string>
+    <string name="title_search">Поиск</string>
+    <string name="title_recipes">Мои рецепты</string>
+    <string name="title_profile">Профиль</string>
 </resources>

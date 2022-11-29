@@ -19,7 +19,35 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.nav_host_fragment_activity_main, SearchFragment())
+            .commit()
         val navView: BottomNavigationView = binding.navView
+
+        val listener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.searchFragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main, SearchFragment())
+                        .commit()
+                    true
+                }
+                R.id.favoritesFragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main, FavoriteFragment())
+                        .commit()
+                    true
+                }
+                R.id.profileFragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main, ProfileFragment())
+                        .commit()
+                    true
+                }
+                else -> false
+           }
+        }
         val fakeFoodRepository = FakeFoodRepository()
         val foodUtils = FoodUtils()
         Log.d("MainActivity", "This is for OnCreate")

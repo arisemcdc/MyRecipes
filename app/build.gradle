@@ -47,6 +47,7 @@ dependencies {
     /* adding timber*/
     implementation 'com.jakewharton.timber:timber:5.0.1'
     def fragment_version= "1.4.0"
+    //noinspection GradleDependency
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
-
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
 }

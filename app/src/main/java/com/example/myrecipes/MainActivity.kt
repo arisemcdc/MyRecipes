@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
                 else -> false
            }
         }
+        navView.setOnNavigationItemSelectedListener(listener)
         val fakeFoodRepository = FakeFoodRepository()
         val foodUtils = FoodUtils()
         Log.d("MainActivity", "This is for OnCreate")

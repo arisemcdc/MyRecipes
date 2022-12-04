@@ -1,5 +1,6 @@
 package com.example.myrecipes.Adapters
 
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,11 +22,18 @@ class RecipeListAdapter (private val recipes: List<RecipeForRecyclerView>): Recy
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val current = recipes[position]
-        holder.
+        holder.name.text = current.name
+        holder.foodImage.setImageResource(R.id.item_Image)
+        holder.meal.text = holder.meal.context.getString(R.string.dinner)
+        holder.isFavorite.isChecked = current.isFavorite
+        holder.rating.numStars = current.rating!!
+        holder.calories.text = current.calories.toString()
+        holder.timeForPreparing.text = current.timeForPreparing.toString()
+        holder.numberOfServings.text = current.numberOfServings.toString()
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return recipes.size
     }
     class RecipeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         internal var name: TextView = itemView.findViewById(R.id.name_textView_item)

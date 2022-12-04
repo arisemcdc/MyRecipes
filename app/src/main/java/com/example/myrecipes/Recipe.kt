@@ -17,8 +17,8 @@ enum class Ingridient(@StringRes val ingridientName: Int) {
     BUTTER(R.string.butter_name),
     WATER(R.string.water_name)
 }
-enum class Meal {
-    BREAKFAST,
-    LUNCH,
-    DINNER
+enum class Meal(@StringRes val mealName: Int) {
+    BREAKFAST(R.string.breakfast),
+    LUNCH(R.string.lunch),
+    DINNER(R.string.dinner)
 }

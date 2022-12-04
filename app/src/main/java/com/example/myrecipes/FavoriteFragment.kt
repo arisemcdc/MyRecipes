@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myrecipes.databinding.FragmentFavoriteBinding
 
 
@@ -20,6 +21,7 @@ class FavoriteFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        root.recipesRecyclerView = LinearLayoutManager(context)
         return root
     }
 }

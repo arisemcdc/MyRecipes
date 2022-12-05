@@ -3,7 +3,6 @@ package com.example.myrecipes
 class RecipeForRecyclerView (
     var id: Int?,
     var name: String,
-    var foodImage: String?,
     var meal: Meal?,
     var isFavorite: Boolean,
     var rating: Int?,

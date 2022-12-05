@@ -2,19 +2,20 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_recipe_card_view"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="100dp"
     app:cardCornerRadius="24dp"
     app:cardBackgroundColor="@color/card_view_background_color">
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/item_Image"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/french_toast_cardview"/>
+            android:src="@drawable/french_toast_cardview"
+            />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,6 +37,7 @@
                 android:textSize="14dp"
                 android:textStyle="bold"
                 android:layout_marginTop="5dp"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,6 +96,8 @@
             android:button="@drawable/checkbox_selector"
             android:gravity="center"
             android:checked="true"
-            android:layout_marginLeft="28dp"/>
-    </LinearLayout>>
+            android:layout_marginRight="2dp"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>

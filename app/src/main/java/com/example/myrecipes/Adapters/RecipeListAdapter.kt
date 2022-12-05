@@ -23,7 +23,7 @@ class RecipeListAdapter (private val recipes: List<RecipeForRecyclerView>): Recy
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val current = recipes[position]
         holder.name.text = current.name
-        holder.foodImage.setImageResource(R.id.item_Image)
+        //holder.foodImage.setImageResource(R.id.item_Image)
         holder.meal.text = holder.meal.context.getString(R.string.dinner)
         holder.isFavorite.isChecked = current.isFavorite
         holder.rating.numStars = current.rating!!
@@ -44,29 +44,7 @@ class RecipeListAdapter (private val recipes: List<RecipeForRecyclerView>): Recy
         internal var calories: TextView = itemView.findViewById(R.id.calories_textView_item)
         internal var timeForPreparing: TextView = itemView.findViewById(R.id.timeforpreparing_textView_item)
         internal var numberOfServings: TextView = itemView.findViewById(R.id.numberofservings_textView_item)
-       /* var recipeForRecyclerView: RecipeForRecyclerView? = null
-            set(value) {
-                field = value
-            }*/
     }
-
 }
 
-/*
-class RecipeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    var recipeForRecyclerView: RecipeForRecyclerView? = null
-    set(value) {
-        field = value
-    }
-}*/
-/*class RecipeForRecyclerView (
-    var id: Int?,
-    var name: String,
-    var foodImage: String?,
-    var meal: Meal?,
-    var isFavorite: Boolean,
-    var rating: Int?,
-    var calories: Int?,
-    var timeForPreparing: Int?,
-    var numberOfServings: Int?
-)*/
+

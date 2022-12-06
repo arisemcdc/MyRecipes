@@ -2,9 +2,16 @@ package com.example.myrecipes
 
 import androidx.annotation.StringRes
 
-data class Recipe(val name: String, val category: FoodCategory, val ingridients: List<String>,
-                  val timeForPreparing: Int, val calories: Int, val steps:List<String>, val isFavorite: Boolean, val rating: Int,
-                  val foodImage: String, val numberOfServings: Int)
+class Recipe (
+    var id: Int?,
+    var name: String,
+    var meal: Meal?,
+    var isFavorite: Boolean,
+    var rating: Int?,
+    var calories: Int?,
+    var timeForPreparing: Int?,
+    var numberOfServings: Int?
+)
 enum class FoodCategory {
     SOUP,
     DRINK,
@@ -17,8 +24,8 @@ enum class Ingridient(@StringRes val ingridientName: Int) {
     BUTTER(R.string.butter_name),
     WATER(R.string.water_name)
 }
-enum class Meal {
-    BREAKFAST,
-    LUNCH,
-    DINNER
+enum class Meal(@StringRes val mealName: Int) {
+    BREAKFAST(R.string.breakfast),
+    LUNCH(R.string.lunch),
+    DINNER(R.string.dinner)
 }

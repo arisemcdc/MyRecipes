@@ -50,5 +50,8 @@ dependencies {
     //noinspection GradleDependency
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    /* adding cardView*/
     implementation 'androidx.cardview:cardview:1.0.0'
+    /* adding RecyclerView*/
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
 }

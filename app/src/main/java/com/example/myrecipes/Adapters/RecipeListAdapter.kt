@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipes.Meal
 import com.example.myrecipes.R
 import com.example.myrecipes.Recipe
-import com.example.myrecipes.RecipeForRecyclerView
 
-class RecipeListAdapter (private val recipes: List<RecipeForRecyclerView>): RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>() {
+
+class RecipeListAdapter (private val recipes: List<Recipe>): RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recipe, parent, false)
         return RecipeViewHolder(view)

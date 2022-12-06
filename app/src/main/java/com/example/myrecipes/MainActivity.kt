@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         d("Fakerepository", fakeFoodRepository.sortByRating(fakeFoodRepository.getRecipe(),true))
         d("Fakerepository", fakeFoodRepository.sortByCalories(fakeFoodRepository.getRecipe()))
         d("Fakerepository", fakeFoodRepository.sortByTimeForPreparing(fakeFoodRepository.getRecipe()))
-        d("Fakerepository", fakeFoodRepository.sortByCategory(fakeFoodRepository.getRecipe()))
+        /*d("Fakerepository", fakeFoodRepository.sortByCategory(fakeFoodRepository.getRecipe()))*/
         d("Fakerepository", foodUtils.resolveFoodIngredient(Ingridient.WATER) )
     }
 

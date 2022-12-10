@@ -22,7 +22,7 @@
                 android:layout_gravity="center"
                 android:src="@drawable/toast_with_cinnamon_and_sugar" />
             <TextView
-                android:id="@+id/meal_textView_item"
+                android:id="@+id/meal_text_view_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Завтрак"

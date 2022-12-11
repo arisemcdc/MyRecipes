@@ -1,8 +1,14 @@
-package com.example.myrecipes.response
+package com.example.myrecipes.Network
 
 import com.google.gson.annotations.SerializedName
 
-data class RecipeResponse (
+data class RecipeResponse(
+    val page: Int,
+    val recipes: List<Recipe>,
+    @SerializedName("page_id")
+    val pageId: String
+)
+data class Recipe (
     val id: Long,
     val title: String,
     val description: String,

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myrecipes.Adapters.RecipeListAdapter
 import com.example.myrecipes.databinding.FragmentFavoriteBinding
 import com.example.myrecipes.Network.RecipeResponse
 import com.example.myrecipes.Network.RecipesApiClient
@@ -41,6 +42,8 @@ class FavoriteFragment : Fragment() {
                 response: Response<List<RecipeResponse>>
             ) {
                 val recipes = response.body()!![0].recipes
+                // Передаеи результат в адаптер
+                recyclerView.adapter = RecipeListAdapter(recipes)
                 Log.d("FavoriteFragment", recipes.toString())
             }
 

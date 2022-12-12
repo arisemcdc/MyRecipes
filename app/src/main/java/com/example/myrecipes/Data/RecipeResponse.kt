@@ -1,5 +1,7 @@
 package com.example.myrecipes.Network
 
+import androidx.annotation.StringRes
+import com.example.myrecipes.R
 import com.google.gson.annotations.SerializedName
 
 data class RecipeResponse(
@@ -14,10 +16,10 @@ data class Recipe (
     val description: String,
 
     @SerializedName("meal_type")
-    val mealType: String,
+    val mealType: MealTimeType,
 
     @SerializedName("dish_type")
-    val dishType: String,
+    val dishType: DishType,
 
     @SerializedName("time_to_cook")
     val timeToCook: Long,
@@ -61,3 +63,19 @@ data class Step (
     @SerializedName("step_description")
     val stepDescription: String
 )
+enum class MealTimeType (@StringRes val mealName: Int) {
+    @SerializedName("breakfast")
+    BREAKFAST(R.string.breakfast),
+    @SerializedName("late_breakfast")
+    LATE_BREAKFAST(R.string.late_breakfast),
+    @SerializedName("dinner")
+    DINNER(R.string.dinner),
+    @SerializedName("supper")
+    SUPPER(R.string.supper)
+}
+enum class DishType (@StringRes val dishName: Int) {
+    @SerializedName("firstdish")
+    FIRSTDISH(R.string.firstdish),
+    @SerializedName("maindish")
+    MAINDISH(R.string.maindish)
+}

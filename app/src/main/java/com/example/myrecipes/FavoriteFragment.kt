@@ -42,8 +42,12 @@ class FavoriteFragment : Fragment() {
                 response: Response<List<RecipeResponse>>
             ) {
                 val recipes = response.body()!![0].recipes
+               /* val recipes = response.body()?[0].recipes*/
                 // Передаеи результат в адаптер
-                recyclerView.adapter = RecipeListAdapter(recipes)
+                /*recyclerView.adapter = RecipeListAdapter(recipes)*/
+                recyclerView.adapter = recipes?.let {
+                 RecipeListAdapter(it)
+                }
                 Log.d("FavoriteFragment", recipes.toString())
             }
 

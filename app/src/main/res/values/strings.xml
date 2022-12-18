@@ -43,4 +43,5 @@
     <string name="maindish">Главное блюдо</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--<string name="BASE_URL">https://61e46d241a976f00176ee4a1.mockapi.io/api/v1/</string>-->
 </resources>

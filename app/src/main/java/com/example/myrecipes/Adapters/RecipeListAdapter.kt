@@ -13,6 +13,7 @@ import com.example.myrecipes.R
 import com.squareup.picasso.Picasso
 
 
+
 class RecipeListAdapter (private val recipes: List<Recipe>): RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recipe, parent, false)
@@ -35,7 +36,15 @@ class RecipeListAdapter (private val recipes: List<Recipe>): RecyclerView.Adapte
             .centerCrop()
             .placeholder(R.drawable.ic_launcher_foreground)
             .into(holder.foodImage)
-
+        /*holder.foodImage.loadImage(current.imageURL)*/
+        /*fun foodImage.loadImage(imageUrl: String) {
+            com.squareup.picasso.Picasso.get()
+                .load(imageUrl)
+                .fit()
+                .centerCrop()
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(this)
+        }*/
        /* holder.name.text = current.name
         //holder.foodImage.setImageResource(R.id.item_Image)
         holder.meal.text = holder.meal.context.getString(R.string.dinner)
@@ -61,7 +70,16 @@ class RecipeListAdapter (private val recipes: List<Recipe>): RecyclerView.Adapte
         internal var calories: TextView = itemView.findViewById(R.id.calories_text_view_item)
         internal var timeForPreparing: TextView = itemView.findViewById(R.id.time_for_preparing_text_view_item)
         internal var numberOfServings: TextView = itemView.findViewById(R.id.number_of_servings_text_view_item)
+        /*fun ImageView.loadImage(imageUrl: String) {
+            com.squareup.picasso.Picasso.get()
+                .load(imageUrl)
+                .fit()
+                .centerCrop()
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(this)*/
+        }
     }
-}
+
+
 
 

@@ -41,6 +41,7 @@ class FavoriteFragment : Fragment() {
                 call: Call<List<RecipeResponse>>,
                 response: Response<List<RecipeResponse>>
             ) {
+                /*if (response.body()?.size > 0 || response.body() != null) {*/
                 val recipes = response.body()!![0].recipes
                /* val recipes = response.body()?[0].recipes*/
                 // Передаеи результат в адаптер
@@ -50,7 +51,6 @@ class FavoriteFragment : Fragment() {
                 }
                 Log.d("FavoriteFragment", recipes.toString())
             }
-
             override fun onFailure(call: Call<List<RecipeResponse>>, t: Throwable) {
                 /* логируем ошибку */
                 Log.e(TAG, t.toString())

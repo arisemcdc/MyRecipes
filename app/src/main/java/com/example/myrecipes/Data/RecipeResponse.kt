@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 
 data class RecipeResponse(
     val page: Int?,
-    val recipes: List<Recipe>,
+    val recipes: List<Recipe>?,
     @SerializedName("page_id")
     val pageId: String?
 )

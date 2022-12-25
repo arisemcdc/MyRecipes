@@ -1,18 +1,18 @@
 package com.example.myrecipes.Adapters
 
 import android.location.GnssAntennaInfo.Listener
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipes.Data.localdb.RecipeEntity
 import com.example.myrecipes.Network.Recipe
 import com.example.myrecipes.R
 import com.squareup.picasso.Picasso
+
+
 
 class RecipeEntityListAdapter (private val recipes: List<RecipeEntity>): RecyclerView.Adapter<RecipeEntityListAdapter.RecipeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
@@ -29,7 +29,9 @@ class RecipeEntityListAdapter (private val recipes: List<RecipeEntity>): Recycle
         holder.calories.text = current.calories.toString()
         holder.timeForPreparing.text = current.timeToCook.toString()
         holder.numberOfServings.text = current.portions.toString()
-
+        /*holder.isFavorite.setOnClickListener {
+            Log.d("RecipeEntityListAdapter", "Нажали сердечко")
+        }*/
         /*Picasso.get()
             .load(current.imageURL)
             .fit()

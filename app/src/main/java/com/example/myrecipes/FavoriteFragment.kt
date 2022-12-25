@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipes.Adapters.RecipeListAdapter
+import com.example.myrecipes.Data.localdb.RecipeEntity
+import com.example.myrecipes.Data.localdb.RecipesRepository
 import com.example.myrecipes.databinding.FragmentFavoriteBinding
 import com.example.myrecipes.Network.RecipeResponse
 import com.example.myrecipes.Network.RecipesApiClient
@@ -19,7 +21,7 @@ import retrofit2.Response
 import javax.security.auth.callback.Callback
 
 
-class FavoriteFragment : Fragment() {
+class FavoriteFragment : Fragment(), RecipeListAdapter.Listener  {
 
     private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
@@ -47,7 +49,7 @@ class FavoriteFragment : Fragment() {
                 // Передаеи результат в адаптер
                 /*recyclerView.adapter = RecipeListAdapter(recipes)*/
                 recyclerView.adapter = recipes?.let {
-                 RecipeListAdapter(it)
+                 RecipeListAdapter(it, this@FavoriteFragment)
                 }
                 Log.d("FavoriteFragment", recipes.toString())
             }
@@ -62,5 +64,11 @@ class FavoriteFragment : Fragment() {
        /* foodRepository = FakeFoodRepository()*/
        /* recyclerView.adapter = RecipeListAdapter(foodRepository.getRecipe())*/
         return root
+    }
+
+    override fun onClickCheckBox(recipeEntity: RecipeEntity) {
+        val dataBase = context?.let {
+            RecipesRepository(it) }
+        dataBase?.insert(recipeEntity)
     }
 }

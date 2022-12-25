@@ -1,5 +1,7 @@
 package com.example.myrecipes.Adapters
 
+import android.location.GnssAntennaInfo.Listener
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,14 +9,19 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myrecipes.Data.localdb.RecipeEntity
 import com.example.myrecipes.Network.Recipe
 import com.example.myrecipes.R
 import com.squareup.picasso.Picasso
 
 
 
-class RecipeListAdapter (private val recipes: List<Recipe>): RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>() {
+class RecipeListAdapter (private val recipes: List<Recipe>, val listener: Listener ): RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>() {
+    interface Listener {
+        fun onClickCheckBox(recipeEntity: RecipeEntity)
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recipe, parent, false)
         return RecipeViewHolder(view)
@@ -36,6 +43,13 @@ class RecipeListAdapter (private val recipes: List<Recipe>): RecyclerView.Adapte
             .centerCrop()
             .placeholder(R.drawable.ic_launcher_foreground)
             .into(holder.foodImage)
+        holder.isFavorite.setOnClickListener {
+            Log.d("RecipeEntityListAdapter", "Нажали сердечко")
+            val recipe = RecipeEntity(null, holder.name.text.toString(),
+            holder.timeForPreparing.text.toString().toLong(), holder.rating.rating.toDouble(),
+            holder.calories.text.toString().toLong(), holder.numberOfServings.text.toString().toLong(),holder.isFavorite.isChecked)
+            listener.onClickCheckBox(recipe)
+        }
         /*holder.foodImage.loadImage(current.imageURL)*/
         /*fun foodImage.loadImage(imageUrl: String) {
             com.squareup.picasso.Picasso.get()

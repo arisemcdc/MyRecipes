@@ -8,11 +8,9 @@ data class RecipeEntity (
    @PrimaryKey
    val id: Long?,
    val title: String?,
-   val description: String?,
    val timeToCook: Long?,
    val rating: Double,
    val calories: Long?,
    val portions: Long?,
-   val category: String?,
    val isFavorite: Boolean?
    )

@@ -5,52 +5,52 @@ import com.example.myrecipes.R
 import com.google.gson.annotations.SerializedName
 
 data class RecipeResponse(
-    val page: Int,
-    val recipes: List<Recipe>,
+    val page: Int?,
+    val recipes: List<Recipe>?,
     @SerializedName("page_id")
-    val pageId: String
+    val pageId: String?
 )
 data class Recipe (
-    val id: Long,
-    val title: String,
-    val description: String,
+    val id: Long?,
+    val title: String?,
+    val description: String?,
 
     @SerializedName("meal_type")
-    val mealType: MealTimeType,
+    val mealType: MealTimeType?,
 
     @SerializedName("dish_type")
-    val dishType: DishType,
+    val dishType: DishType?,
 
     @SerializedName("time_to_cook")
-    val timeToCook: Long,
+    val timeToCook: Long?,
 
     val rating: Double,
-    val calories: Long,
+    val calories: Long?,
 
     @SerializedName("is_favorite")
     val isFavorite: Boolean,
 
-    val portions: Long,
-    val category: String,
+    val portions: Long?,
+    val category: String?,
 
     @SerializedName("image_url")
-    val imageURL: String,
+    val imageURL: String?,
 
-    val ingredients: List<Ingredient>,
-    val steps: List<Step>
+    val ingredients: List<Ingredient>?,
+    val steps: List<Step>?
 )
 
 data class Ingredient (
-    val title: String,
+    val title: String?,
 
     @SerializedName("ingredient_alias")
-    val ingredientAlias: String,
+    val ingredientAlias: String?,
 
-    val count: Double,
-    val unit: String,
+    val count: Double?,
+    val unit: String?,
 
     @SerializedName("unit_code")
-    val unitCode: Long,
+    val unitCode: Long?,
 
     @SerializedName("ingredient_url")
     val ingredientURL: String?
@@ -58,10 +58,10 @@ data class Ingredient (
 
 data class Step (
     @SerializedName("step_number")
-    val stepNumber: Long,
+    val stepNumber: Long?,
 
     @SerializedName("step_description")
-    val stepDescription: String
+    val stepDescription: String?
 )
 enum class MealTimeType (@StringRes val mealName: Int) {
     @SerializedName("breakfast")

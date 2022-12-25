@@ -5,11 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CheckBox
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipes.Data.localdb.RecipeEntity
 import com.example.myrecipes.Network.Recipe
@@ -18,10 +14,7 @@ import com.squareup.picasso.Picasso
 
 
 
-class RecipeListAdapter (private val recipes: List<Recipe>, val listener: Listener ): RecyclerView.Adapter<RecipeListAdapter.RecipeViewHolder>() {
-    interface Listener {
-        fun onClickCheckBox(recipeEntity: RecipeEntity)
-    }
+class RecipeEntityListAdapter (private val recipes: List<RecipeEntity>): RecyclerView.Adapter<RecipeEntityListAdapter.RecipeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recipe, parent, false)
         return RecipeViewHolder(view)
@@ -30,26 +23,21 @@ class RecipeListAdapter (private val recipes: List<Recipe>, val listener: Listen
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val current = recipes[position]
         holder.name.text = current.title
-        holder.meal.text = current.mealType.toString()
-        holder.isFavorite.isChecked = current.isFavorite
+        /*holder.meal.text = current.mealType.toString()*/
+        holder.isFavorite.isChecked = current.isFavorite == true
         holder.rating.numStars = current.rating.toInt()
         holder.calories.text = current.calories.toString()
         holder.timeForPreparing.text = current.timeToCook.toString()
         holder.numberOfServings.text = current.portions.toString()
-
-        Picasso.get()
+        /*holder.isFavorite.setOnClickListener {
+            Log.d("RecipeEntityListAdapter", "Нажали сердечко")
+        }*/
+        /*Picasso.get()
             .load(current.imageURL)
             .fit()
             .centerCrop()
             .placeholder(R.drawable.ic_launcher_foreground)
-            .into(holder.foodImage)
-        holder.isFavorite.setOnClickListener {
-            Log.d("RecipeEntityListAdapter", "Нажали сердечко")
-            val recipe = RecipeEntity(null, holder.name.text.toString(),
-            holder.timeForPreparing.text.toString().toLong(), holder.rating.rating.toDouble(),
-            holder.calories.text.toString().toLong(), holder.numberOfServings.text.toString().toLong(),holder.isFavorite.isChecked)
-            listener.onClickCheckBox(recipe)
-        }
+            .into(holder.foodImage)*/
         /*holder.foodImage.loadImage(current.imageURL)*/
         /*fun foodImage.loadImage(imageUrl: String) {
             com.squareup.picasso.Picasso.get()
@@ -59,11 +47,11 @@ class RecipeListAdapter (private val recipes: List<Recipe>, val listener: Listen
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .into(this)
         }*/
-       /* holder.name.text = current.name
-        //holder.foodImage.setImageResource(R.id.item_Image)
-        holder.meal.text = holder.meal.context.getString(R.string.dinner)
-        holder.isFavorite.isChecked = current.isFavorite
-       *//* holder.rating.numStars =  current?.let {
+        /* holder.name.text = current.name
+         //holder.foodImage.setImageResource(R.id.item_Image)
+         holder.meal.text = holder.meal.context.getString(R.string.dinner)
+         holder.isFavorite.isChecked = current.isFavorite
+        *//* holder.rating.numStars =  current?.let {
             it.rating
         }*//*
         holder.rating.numStars = current.rating!!
@@ -84,16 +72,6 @@ class RecipeListAdapter (private val recipes: List<Recipe>, val listener: Listen
         internal var calories: TextView = itemView.findViewById(R.id.calories_text_view_item)
         internal var timeForPreparing: TextView = itemView.findViewById(R.id.time_for_preparing_text_view_item)
         internal var numberOfServings: TextView = itemView.findViewById(R.id.number_of_servings_text_view_item)
-        /*fun ImageView.loadImage(imageUrl: String) {
-            com.squareup.picasso.Picasso.get()
-                .load(imageUrl)
-                .fit()
-                .centerCrop()
-                .placeholder(R.drawable.ic_launcher_foreground)
-                .into(this)*/
-        }
+
     }
-
-
-
-
+}

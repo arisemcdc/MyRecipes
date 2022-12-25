@@ -45,6 +45,12 @@ class MainActivity : AppCompatActivity() {
                         .commit()
                     true
                 }
+                R.id.favoritesFromLocalDBFragment -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main, FavoriteFromLocalDBFragment())
+                        .commit()
+                    true
+                }
                 else -> false
            }
         }

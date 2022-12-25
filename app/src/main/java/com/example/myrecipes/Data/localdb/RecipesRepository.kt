@@ -17,7 +17,7 @@ class RecipesRepository(context: Context) {
     fun delete(recipe: RecipeEntity) {
         recipesDAO.delete(recipe)
     }
-    fun loadRecipes() {
-        recipesDAO.loadRecipes()
+    fun loadRecipes(): List<RecipeEntity> {
+        return recipesDAO.loadRecipes()
     }
 }

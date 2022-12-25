@@ -34,6 +34,7 @@
     <string name="title_search">Поиск</string>
     <string name="title_recipes">Мои рецепты</string>
     <string name="title_profile">Профиль</string>
+    <string name="title_favorite_from_db">Любимые рецепты</string>
     <string name="breakfast">Завтрак</string>
     <string name="late_breakfast">Поздний завтрак</string>
     <string name="dinner">Обед</string>

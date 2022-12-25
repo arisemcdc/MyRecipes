@@ -15,4 +15,9 @@
         android:icon="@drawable/ic_baseline_person_24"
         android:title="@string/title_profile"
         />
+    <item
+        android:id="@+id/favoritesFromLocalDBFragment"
+        android:icon="@drawable/ic_twotone_favorite_24"
+        android:title="@string/title_favorite_from_db"
+        />
 </menu>

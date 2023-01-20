@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myrecipes.Adapters.RecipeListAdapter
@@ -25,12 +26,15 @@ class FavoriteFragment : Fragment(), RecipeListAdapter.Listener  {
 
     private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
+    private lateinit var favoriteViewModel: FavoriteViewModel
    /* lateinit var foodRepository: FakeFoodRepository*/
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        favoriteViewModel =
+                ViewModelProvider(this).get(FavoriteViewModel::class.java)
         // Inflate the layout for this fragment
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -43,11 +47,9 @@ class FavoriteFragment : Fragment(), RecipeListAdapter.Listener  {
                 call: Call<List<RecipeResponse>>,
                 response: Response<List<RecipeResponse>>
             ) {
-                /*if (response.body()?.size > 0 || response.body() != null) {*/
+
                 val recipes = response.body()!![0].recipes
-               /* val recipes = response.body()?[0].recipes*/
-                // Передаеи результат в адаптер
-                /*recyclerView.adapter = RecipeListAdapter(recipes)*/
+                // Передаем результат в адаптер
                 recyclerView.adapter = recipes?.let {
                  RecipeListAdapter(it, this@FavoriteFragment)
                 }

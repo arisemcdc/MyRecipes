@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,28 +41,21 @@ class FavoriteFragment : Fragment(), RecipeListAdapter.Listener  {
         val root: View = binding.root
         val recyclerView = root.findViewById<RecyclerView>(R.id.recipeRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        /* вызываем метод getRecipes() в interface RecipesApiInterface */
-        val call = RecipesApiClient.apiClient.getRecipes()
-        call.enqueue(/* callback = */ object :Callback, retrofit2.Callback<List<RecipeResponse>> {
-            override fun onResponse(
-                call: Call<List<RecipeResponse>>,
-                response: Response<List<RecipeResponse>>
-            ) {
+        favoriteViewModel.recipes.observe(viewLifecycleOwner, Observer {
+            recyclerView.adapter = RecipeListAdapter(it,this)
+            Log.d("FavoriteFragment", favoriteViewModel.recipes.toString())
+        }
+        )
 
-                val recipes = response.body()!![0].recipes
-                // Передаем результат в адаптер
-                recyclerView.adapter = recipes?.let {
+
+               /* recyclerView.adapter = recipes?.let {
                  RecipeListAdapter(it, this@FavoriteFragment)
                 }
-                Log.d("FavoriteFragment", recipes.toString())
-            }
-            override fun onFailure(call: Call<List<RecipeResponse>>, t: Throwable) {
-                /* логируем ошибку */
-                Log.e(TAG, t.toString())
-                Toast.makeText(context,"Что-то пошло не так!", Toast.LENGTH_SHORT).show()
-            }
+                Log.d("FavoriteFragment", recipes.toString())*/
 
-        })
+
+
+
         /*Фейк репозиторий*/
        /* foodRepository = FakeFoodRepository()*/
        /* recyclerView.adapter = RecipeListAdapter(foodRepository.getRecipe())*/

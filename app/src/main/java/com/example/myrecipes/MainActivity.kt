@@ -55,17 +55,17 @@ class MainActivity : AppCompatActivity() {
            }
         }
         navView.setOnNavigationItemSelectedListener(listener)
-        val fakeFoodRepository = FakeFoodRepository()
+       /* val fakeFoodRepository = FakeFoodRepository()
         val foodUtils = FoodUtils()
         Log.d("MainActivity", "This is for OnCreate")
-       /* timber.log.Timber.d("MainActivity","This is for onCreate111")
-        Timber.d("Hello","1")*/
+       *//* timber.log.Timber.d("MainActivity","This is for onCreate111")
+        Timber.d("Hello","1")*//*
         d("Fakerepository", fakeFoodRepository.getRecipe())
         d("Fakerepository", fakeFoodRepository.sortByRating(fakeFoodRepository.getRecipe(),true))
         d("Fakerepository", fakeFoodRepository.sortByCalories(fakeFoodRepository.getRecipe()))
         d("Fakerepository", fakeFoodRepository.sortByTimeForPreparing(fakeFoodRepository.getRecipe()))
-        /*d("Fakerepository", fakeFoodRepository.sortByCategory(fakeFoodRepository.getRecipe()))*/
-        d("Fakerepository", foodUtils.resolveFoodIngredient(Ingridient.WATER) )
+        *//*d("Fakerepository", fakeFoodRepository.sortByCategory(fakeFoodRepository.getRecipe()))*//*
+        d("Fakerepository", foodUtils.resolveFoodIngredient(Ingridient.WATER) )*/
     }
 
     override fun onResume() {

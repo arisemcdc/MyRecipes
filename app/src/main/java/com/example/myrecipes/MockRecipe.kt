@@ -2,7 +2,7 @@ package com.example.myrecipes
 
 import androidx.annotation.StringRes
 
-class Recipe (
+/*class Recipe (
     var id: Int?,
     var name: String,
     var meal: Meal?,
@@ -11,7 +11,7 @@ class Recipe (
     var calories: Int?,
     var timeForPreparing: Int?,
     var numberOfServings: Int?
-)
+)*/
 enum class FoodCategory {
     SOUP,
     DRINK,

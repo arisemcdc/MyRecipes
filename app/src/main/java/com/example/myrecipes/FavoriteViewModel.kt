@@ -15,8 +15,10 @@ import retrofit2.Response
 import javax.security.auth.callback.Callback
 
 class FavoriteViewModel: ViewModel() {
-   private val _recipes = MutableLiveData<List<Recipe>>()
+    private val _recipes = MutableLiveData<List<Recipe>>()
     val recipes : LiveData<List<Recipe>> = _recipes
+    private val _errorLiveData = MutableLiveData<String>()
+    val errorLiveData: LiveData<String> = _errorLiveData
 
     private val call = RecipesApiClient.apiClient.getRecipes()
     init {
@@ -33,6 +35,7 @@ class FavoriteViewModel: ViewModel() {
 
             override fun onFailure(call: Call<List<RecipeResponse>>, t: Throwable) {
                 Log.e(ContentValues.TAG, t.toString())
+                _errorLiveData.postValue("Произошла ошибка")
             }
 
         })
